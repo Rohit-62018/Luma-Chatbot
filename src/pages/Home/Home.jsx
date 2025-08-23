@@ -59,7 +59,7 @@ export default function Home() {
     }
   }, [msgs]);
 
-  // ✅ नया chat create करने का function
+
   const createChat = useCallback(async () => {
     if (!title.trim()) return;
     try {
@@ -73,19 +73,19 @@ export default function Home() {
       setTitles((prev) => [newChat, ...prev]);
       setChatId(newChat.id);
       setTitle("");
-      toast.success("Chat created successfully ✅");
+      toast.success("Chat created successfully ");
     } catch (err) {
       toast.error(err.message || "Error creating chat");
     }
   }, [title]);
 
-  // ✅ Send Message (अब बिना chatId के नहीं भेजेगा)
+
   const sendMessage = useCallback(async () => {
     const userMessage = msg.trim();
     if (!userMessage) return;
 
     if (!chatId) {
-      toast.error("⚠️ You need to select or create a chat first");
+      toast.error(" You need to select or create a chat first");
       return;
     }
 
