@@ -1,0 +1,28 @@
+.console {
+  height: 77%;
+  min-width: 400px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  margin: 5% 15% 0 15%;
+}
+
+.cover-div {
+  display: flex;
+  width: 98%;
+  margin: 35px auto;
+}
+
+.img-continer img {
+  height: 40px;
+  width: 40px;
+  margin: 14px -5px 0 0;
+}
+
+@media (max-width:660px) {
+   .console{
+    margin: 16% 2% 0 2%;
+    height: 78%;
+    width: 100%;
+   }
+}

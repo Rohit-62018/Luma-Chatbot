@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.slider{
+    width: 18%;
+    height: 100vh;
+    background: rgb(24, 24, 24);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, 0.5s ease-in-out;
+    padding: 5rem 0 1rem 0;
+    
+}
+.chats{
+    width: 100%;
+    height: 94%;
+}
+.chats h4{
+    padding:0.5rem 1rem ;
+}
+.title{
+    padding: 1rem 6%;
+    height: max-content;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0.7rem;
+    margin-left: 5%;
+}
+.title:hover{
+   background-color: rgba(255, 255, 255, 0.084);
+   cursor: pointer;
+   
+}
+
+.slider-remove i{
+    margin-left: auto;
+    font-size:1.7rem;
+    color: #fff;
+    opacity: 0.8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.slider-remove i:hover{
+    background-color: rgb(87, 83, 83);
+      
+}
+.open {
+  transform: translateX(0);
+  width: 18%;
+}
+
+.closed {
+  transform: translateX(-1px); 
+  width:3rem;
+}
+
+.No-chats{
+    position: absolute;
+    left: 33%;
+    top: 50%;
+    opacity: 0.5;
+}
+
+.chat-inti{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    border-radius: 10px;
+    margin: 5% ;
+    padding: 5% 5%;
+}
+
+.chat-inti input{
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 4% 0;
+    padding: 0.5rem ;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.187);
+    border-radius: 10px;
+    color: white;
+}
+.chat-inti button{
+    width: 100%;
+    cursor: pointer;
+    border-radius:10px;
+    border: none;
+    background-color: rgb(97, 97, 103);
+    margin:7px 0 ;
+}
+.title-Container{
+    height: 70%;
+    overflow:scroll;
+    scrollbar-width: none;
+}
+
+@media (max-width: 560px){
+    .slider{
+        display: none;
+    }
+}

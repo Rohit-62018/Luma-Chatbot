@@ -1,0 +1,85 @@
+.intro {
+  position: relative;
+  top: 41%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  opacity: 0;
+  animation: slideUpFade 0.4s ease-out forwards;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  animation-delay: 1s;
+  min-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3.3rem;
+}
+.name{
+    font-size: 43px;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: transparent; 
+  overflow: hidden;
+  top: -10px;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;  /* line ka rang */
+  width: 100%;
+  transform-origin: left; /* pehle left se grow */
+  transform: scaleX(0);
+  animation: grow-shrink 1s linear forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes grow-shrink {
+  0%   { transform-origin: left;  transform: scaleX(0); }
+  50%  { transform-origin: left;  transform: scaleX(1); }  /* full width tak */
+  51%  { transform-origin: right; transform: scaleX(1); }  /* ab peeche se ghatega */
+  100% { transform-origin: right; transform: scaleX(0); }  /* 0% tak ghata */
+}
+
+@media (max-width:580px) {
+   .intro{
+    position: absolute;
+    top: 41%;
+    width: 100%;
+    min-width: 100%;
+   }
+   
+} 
+
+ /* fontFamily: "'Inter', sans-serif", 
+      fontSize: "32px", 
+      fontWeight: "600", 
+      color: "white", 
+border: 2px solid transparent;
+border-image: linear-gradient(45deg, #ff0000, #ff9900, #ff0000);
+border-image-slice: 1;
+animation: glow 3s linear infinite;
+
+       /* background: linear-gradient( #1a1a1a , #000000); */
