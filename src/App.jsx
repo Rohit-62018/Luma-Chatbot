@@ -16,7 +16,7 @@ export default function App() {
 
     if (isAuthenticated) {
       if (window.location.pathname === '/login') {
-        navigate('/');   // agar login hogya aur abhi bhi /login par hai, to home bhej do
+        navigate('/');   
       }
     }
   }, [isAuthenticated, isLoading, navigate]);
