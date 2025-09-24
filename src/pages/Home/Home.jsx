@@ -1,4 +1,3 @@
-// Home.jsx
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
@@ -90,14 +89,13 @@ export default function Home() {
     }
 
     try {
-      // पहले UI में दिखाओ
+    
       setMsgs((prev) => [
         ...prev,
         { id: uuidv4(), sender: "user", content: userMessage },
       ]);
       setLoad(true);
 
-      // DB में save करो
       await nhost.graphql.request(SendUserMessage, { content: userMessage, chatId });
       await nhost.graphql.request(SendMessage, { message: userMessage, chat_id: chatId });
     } catch (err) {
